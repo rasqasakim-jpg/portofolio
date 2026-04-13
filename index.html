@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- NOISE OVERLAY -->
+  <div class="noise"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">DIH<span class="dot">.</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#github">GitHub</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+      Hire Me
+    </button>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+      <li><a href="#projects" onclick="closeMobileMenu()">Projects</a></li>
+      <li><a href="#skills" onclick="closeMobileMenu()">Skills</a></li>
+      <li><a href="#github" onclick="closeMobileMenu()">GitHub</a></li>
+      <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-text">DEV</div>
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        Available for work
+      </div>
+      <h1 class="hero-title reveal">
+        Hi, I'm<br />
+        <span class="name-highlight">Defense Irgi Harnoyo</span>
+      </h1>
+      <p class="hero-subtitle reveal">
+        Full Stack Web Developer yang membangun pengalaman<br />
+        digital yang <em>cepat, indah, dan fungsional</em>.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#projects" class="btn-primary">
+          Lihat Projects
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#" class="btn-ghost" download>Download CV</a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat">
+          <span class="stat-num">6+</span>
+          <span class="stat-label">Projects Done</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">1+</span>
+          <span class="stat-label">Years Coding</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">5★</span>
+          <span class="stat-label">Client Rating</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="avatar-ring">
+        <div class="avatar-inner">
+          <!-- Ganti src dengan foto kamu -->
+          <div class="avatar-placeholder"></div>
+          <img src="foto.jpeg" alt="Your Name" />
+        </div>
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+        <svg class="orbit" viewBox="0 0 200 200">
+          <circle cx="100" cy="100" r="90" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1" stroke-dasharray="4 8"/>
+        </svg>
+        <div class="orbit-dot orbit-dot-1"></div>
+        <div class="orbit-dot orbit-dot-2"></div>
+      </div>
+      <div class="floating-badge fb-1">
+        <span>⚛️</span> React
+      </div>
+      <div class="floating-badge fb-2">
+        <span>🟩</span> Node.js
+      </div>
+      <div class="floating-badge fb-3">
+        <span>🎨</span> UI/UX
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-label reveal">About Me</div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <h2 class="section-title">Saya seorang developer<br /><span class="accent">yang peduli detail</span></h2>
+          <p>
+            Perkenalkan, saya <strong>Defense Irgi Harnoyo</strong> — seorang Full Stack Web Developer berbasis di <strong>Yogyakarta, Indonesia</strong>.
+            Saya mengkhususkan diri dalam membangun website dan aplikasi web yang tidak hanya terlihat bagus,
+            tapi juga cepat, mudah digunakan, dan memberi dampak nyata bagi bisnis klien.
+          </p>
+          <p>
+            Saya sudah mengerjakan berbagai jenis project mulai dari website klien, e-commerce, hingga aplikasi berbasis API. Saya percaya bahwa kode yang baik adalah kode yang bisa dimengerti dan dikembangkan di masa depan.
+          </p>
+          <div class="about-tags">
+            <span class="atag">Clean Code</span>
+            <span class="atag">Responsive Design</span>
+            <span class="atag">Fast Delivery</span>
+            <span class="atag">Komunikatif</span>
+          </div>
+        </div>
+        <div class="about-card reveal">
+          <div class="acard-row">
+            <div class="acard-icon">📍</div>
+            <div>
+              <div class="acard-label">Lokasi</div>
+              <div class="acard-value">Yogyakarta, Indonesia</div>
+            </div>
+          </div>
+          <div class="acard-row">
+            <div class="acard-icon">🎓</div>
+            <div>
+              <div class="acard-label">Pendidikan</div>
+              <div class="acard-value">Teknik Informatika</div>
+            </div>
+          </div>
+          <div class="acard-row">
+            <div class="acard-icon">💼</div>
+            <div>
+              <div class="acard-label">Status</div>
+              <div class="acard-value available">Open to Work / Freelance</div>
+            </div>
+          </div>
+          <div class="acard-row">
+            <div class="acard-icon">🌐</div>
+            <div>
+              <div class="acard-label">Bahasa</div>
+              <div class="acard-value">Indonesia, English</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-label reveal">My Work</div>
+      <h2 class="section-title reveal">Projects yang <span class="accent">pernah aku kerjakan</span></h2>
+      <p class="section-desc reveal">Klik tombol "Live" untuk melihat langsung, atau "GitHub" untuk lihat source code-nya.</p>
+
+      <div class="projects-grid">
+
+        <!-- PROJECT 1 — Ganti sesuai projectmu -->
+        <div class="project-card reveal" data-delay="0">
+          <div class="project-img" style="background: linear-gradient(135deg, #2d0a3e, #7b2d8b);">
+            <span class="project-emoji">💅</span>
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3 class="project-name">Winda Beauty Bar</h3>
+              <div class="project-type">Client Project</div>
+            </div>
+            <p class="project-desc">Website toko online lengkap dengan fitur keranjang belanja, payment gateway Midtrans, dan dashboard admin untuk kelola produk & pesanan.</p>
+            <div class="project-stack">
+              <span>React</span><span>Vercel</span><span>Tailwind CSS</span>
+            </div>
+            <div class="project-links">
+              <a href="https://winda-beauty-bar.vercel.app/" target="_blank" class="plink-live">
+                Live
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+              <a href="https://github.com/rasqasakim-jpg" target="_blank" class="plink-gh">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="project-card reveal" data-delay="100">
+          <div class="project-img" style="background: linear-gradient(135deg, #1a1a3e, #3a3a8c);">
+            <span class="project-emoji">🧠</span>
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3 class="project-name">Irgi Quizz</h3>
+              <div class="project-type">Quiz App</div>
+            </div>
+            <p class="project-desc">Aplikasi kuis interaktif sederhana dengan berbagai kategori soal, sistem penilaian otomatis, dan tampilan hasil akhir yang menarik.</p>
+            <div class="project-stack">
+              <span>React</span><span>JavaScript</span><span>CSS</span>
+            </div>
+            <div class="project-links">
+              <a href="https://irgi-quizz.vercel.app/" target="_blank" class="plink-live">
+                Live
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+              <a href="https://github.com/rasqasakim-jpg" target="_blank" class="plink-gh">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 3 -->
+        <div class="project-card reveal" data-delay="200">
+          <div class="project-img" style="background: linear-gradient(135deg, #001d3d, #003566);">
+            <span class="project-emoji">🌤️</span>
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3 class="project-name">WeatherKu</h3>
+              <div class="project-type">Weather App</div>
+            </div>
+            <p class="project-desc">Aplikasi web untuk mengecek cuaca secara real-time berdasarkan lokasi. Menampilkan suhu, kondisi cuaca, kelembaban, dan prakiraan harian.</p>
+            <div class="project-stack">
+              <span>React</span><span>Weather API</span><span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://weatherku-eight.vercel.app/" target="_blank" class="plink-live">
+                Live
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+              <a href="https://github.com/rasqasakim-jpg" target="_blank" class="plink-gh">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 4 -->
+        <div class="project-card reveal" data-delay="300">
+          <div class="project-img" style="background: linear-gradient(135deg, #1a2e1a, #2d5a27);">
+            <span class="project-emoji">✅</span>
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3 class="project-name">To-Do List App</h3>
+              <div class="project-type">Quiz App</div>
+            </div>
+            <p class="project-desc">Aplikasi to-do list sederhana sebagai project awal — fitur tambah, hapus, dan tandai tugas selesai. Bukti awal perjalanan coding saya.</p>
+            <div class="project-stack">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://to-do-list-eight-mocha-42.vercel.app/" target="_blank" class="plink-live">
+                Live
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+              <a href="https://github.com/rasqasakim-jpg" target="_blank" class="plink-gh">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 5 — Tambah lebih banyak dengan cara copy salah satu card di atas -->
+        <div class="project-card reveal" data-delay="400">
+          <div class="project-img" style="background: linear-gradient(135deg, #1a0033, #4d0099);">
+            <span class="project-emoji">📱</span>
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3 class="project-name">Shopping App</h3>
+              <div class="project-type">E-Commerce</div>
+            </div>
+            <p class="project-desc">Aplikasi belanja online dengan halaman produk, detail item, keranjang belanja, dan alur checkout yang lengkap.</p>
+            <div class="project-stack">
+              <span>React</span><span>Node.js</span><span>CSS</span>
+            </div>
+            <div class="project-links">
+              <a href="https://shoppingapp-drab.vercel.app/products" target="_blank" class="plink-live">
+                Live
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+              <a href="https://github.com/rasqasakim-jpg" target="_blank" class="plink-gh">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 6 -->
+        <div class="project-card reveal" data-delay="500">
+          <div class="project-img" style="background: linear-gradient(135deg, #001a1a, #006666);">
+            <span class="project-emoji">🔧</span>
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3 class="project-name">E-Commerce Lite</h3>
+              <div class="project-type">E-Commerce</div>
+            </div>
+            <p class="project-desc">Versi lebih ringan dari platform e-commerce — menampilkan listing produk, kategori, pencarian, dan halaman detail produk yang responsif.</p>
+            <div class="project-stack">
+              <span>React</span><span>JavaScript</span><span>Vercel</span>
+            </div>
+            <div class="project-links">
+              <a href="https://e-commerce-lite-swart.vercel.app/" target="_blank" class="plink-live">
+                Live
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+              <a href="https://github.com/rasqasakim-jpg" target="_blank" class="plink-gh">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GITHUB STATS -->
+  <section class="github-section section" id="github">
+    <div class="container">
+      <div class="section-label reveal">Open Source</div>
+      <h2 class="section-title reveal">GitHub <span class="accent">Activity</span></h2>
+      <p class="section-desc reveal">Semua project di atas bisa kamu lihat source code-nya di GitHub saya.</p>
+      <div class="github-card reveal">
+        <div class="gh-profile">
+          <div class="gh-avatar">
+            <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </div>
+          <div class="gh-info">
+            <div class="gh-name">@rasqasakim-jpg</div>
+            <!-- Ganti username GitHub kamu -->
+            <div class="gh-url">github.com/rasqasakim-jpg</div>
+          </div>
+          <a href="https://github.com/rasqasakim-jpg" target="_blank" class="btn-primary gh-btn">
+            Kunjungi Profile
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+        </div>
+        <div class="gh-stats-row">
+          <div class="gh-stat">
+            <div class="gh-stat-num">24</div>
+            <div class="gh-stat-label">Repositories</div>
+          </div>
+          <div class="gh-stat">
+            <div class="gh-stat-num">312</div>
+            <div class="gh-stat-label">Commits</div>
+          </div>
+          <div class="gh-stat">
+            <div class="gh-stat-num">18</div>
+            <div class="gh-stat-label">Stars</div>
+          </div>
+          <div class="gh-stat">
+            <div class="gh-stat-num">7</div>
+            <div class="gh-stat-label">Forks</div>
+          </div>
+        </div>
+        <!-- GitHub contribution graph from github-readme-stats — ganti username -->
+        <div class="gh-contrib">
+          <img src="https://github-readme-stats.vercel.app/api?username=rasqasakim-jpg&show_icons=true&theme=transparent&hide_border=true&title_color=e2e8f0&text_color=94a3b8&icon_color=a78bfa" alt="GitHub Stats" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills-section section" id="skills">
+    <div class="container">
+      <div class="section-label reveal">Tech Stack</div>
+      <h2 class="section-title reveal">Skills & <span class="accent">Technologies</span></h2>
+      <div class="skills-grid">
+        <!-- Frontend -->
+        <div class="skill-category reveal">
+          <div class="skill-cat-title">Frontend</div>
+          <div class="skill-items">
+            <div class="skill-item"><div class="skill-icon si-react">⚛️</div><span>React</span></div>
+            <div class="skill-item"><div class="skill-icon si-next">▲</div><span>Next.js</span></div>
+            <div class="skill-item"><div class="skill-icon">🎨</div><span>HTML/CSS</span></div>
+            <div class="skill-item"><div class="skill-icon">💛</div><span>JavaScript</span></div>
+            <div class="skill-item"><div class="skill-icon">🌀</div><span>Tailwind</span></div>
+          </div>
+        </div>
+        <!-- Backend -->
+        <div class="skill-category reveal">
+          <div class="skill-cat-title">Backend</div>
+          <div class="skill-items">
+            <div class="skill-item"><div class="skill-icon">🟩</div><span>Node.js</span></div>
+            <div class="skill-item"><div class="skill-icon">🚂</div><span>Express.js</span></div>
+            <div class="skill-item"><div class="skill-icon">🔗</div><span>REST API</span></div>
+            <div class="skill-item"><div class="skill-icon">🔐</div><span>JWT / Auth</span></div>
+          </div>
+        </div>
+        <!-- Database & Tools -->
+        <div class="skill-category reveal">
+          <div class="skill-cat-title">Database & Tools</div>
+          <div class="skill-items">
+            <div class="skill-item"><div class="skill-icon">🐬</div><span>MySQL</span></div>
+            <div class="skill-item"><div class="skill-icon">🍃</div><span>MongoDB</span></div>
+            <div class="skill-item"><div class="skill-icon">🐙</div><span>Git / GitHub</span></div>
+            <div class="skill-item"><div class="skill-icon">⚡</div><span>Vite</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section section" id="contact">
+    <div class="container">
+      <div class="section-label reveal">Get in Touch</div>
+      <h2 class="section-title reveal">Punya project?<br /><span class="accent">Ayo ngobrol!</span></h2>
+      <p class="section-desc reveal">Saya selalu terbuka untuk diskusi project baru, kesempatan kerja, atau sekadar ngobrol soal teknologi.</p>
+      <div class="contact-grid">
+        <a href="mailto:rasqasakim@gmail.com" class="contact-card reveal">
+          <div class="contact-icon">📧</div>
+          <div class="contact-info">
+            <div class="contact-label">Email</div>
+            <div class="contact-value">rasqasakim@gmail.com</div>
+          </div>
+          <div class="contact-arrow">→</div>
+        </a>
+        <a href="https://wa.me/6281334362970" target="_blank" class="contact-card reveal">
+          <div class="contact-icon">💬</div>
+          <div class="contact-info">
+            <div class="contact-label">WhatsApp</div>
+            <div class="contact-value">+62 813-3436-2970</div>
+          </div>
+          <div class="contact-arrow">→</div>
+        </a>
+        <a href="https://linkedin.com/in/defense-irgi-harnoyo" target="_blank" class="contact-card reveal">
+          <div class="contact-icon">💼</div>
+          <div class="contact-info">
+            <div class="contact-label">LinkedIn</div>
+            <div class="contact-value">linkedin.com/in/defense-irgi-harnoyo</div>
+          </div>
+          <div class="contact-arrow">→</div>
+        </a>
+        <a href="https://github.com/rasqasakim-jpg" target="_blank" class="contact-card reveal">
+          <div class="contact-icon">🐙</div>
+          <div class="contact-info">
+            <div class="contact-label">GitHub</div>
+            <div class="contact-value">github.com/rasqasakim-jpg</div>
+          </div>
+          <div class="contact-arrow">→</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-logo">DIH<span class="dot">.</span></div>
+        <p>Building the web, one commit at a time.</p>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Defense Irgi Harnoyo. All rights reserved.</span>
+        <span>Made with ❤️ in Yogyakarta, Indonesia</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
