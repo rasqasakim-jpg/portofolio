@@ -145,4 +145,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // ── Console easter egg ─────────────────────────
 console.log('%c👋 Hey there, developer!', 'font-size: 20px; font-weight: bold; color: #a78bfa;');
-console.log('%cLihat source code-nya di GitHub ya!', 'font-size: 14px; color: #94a3b8;');
+console.log('%cCheck out the source code on GitHub. (lihat source code-nya di GitHub ya!)', 'font-size: 14px; color: #94a3b8;');
+document.querySelectorAll('.project-toggle').forEach(button => {
+  button.addEventListener('click', () => {
+    const card = button.closest('.project-card');
+    const expanded = card.classList.toggle('expanded');
+
+    button.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    button.textContent = expanded ? 'Show less' : 'Show more';
+  });
+});

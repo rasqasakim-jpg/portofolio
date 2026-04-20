@@ -35,6 +35,18 @@ body {
 a { text-decoration: none; color: inherit; }
 img { max-width: 100%; display: block; }
 
+.translation-note {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.section-note {
+  margin-bottom: 12px;
+}
+
 /* ── Noise overlay ── */
 .noise {
   position: fixed; inset: 0; z-index: 1000; pointer-events: none;
@@ -147,6 +159,7 @@ img { max-width: 100%; display: block; }
   font-family: var(--font-body); font-size: 14px; font-weight: 500;
   padding: 12px 24px; border-radius: 8px; border: none; cursor: pointer;
   transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  flex-wrap: wrap;
 }
 .btn-primary:hover {
   background: #c4b5fd;
@@ -387,6 +400,11 @@ img { max-width: 100%; display: block; }
   border: 1px solid rgba(167,139,250,0.2);
   color: var(--accent);
 }
+.atag .translation-note {
+  margin-top: 2px;
+  font-size: 10px;
+  color: rgba(167, 139, 250, 0.7);
+}
 .about-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -442,6 +460,28 @@ img { max-width: 100%; display: block; }
 }
 .project-desc {
   font-size: 13px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 12px;
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.project-card.expanded .project-desc {
+  display: block;
+  overflow: visible;
+}
+.project-toggle {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin-bottom: 14px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.project-toggle:hover {
+  color: #c4b5fd;
 }
 .project-stack { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
 .project-stack span {
@@ -489,6 +529,12 @@ img { max-width: 100%; display: block; }
 .gh-name { font-family: var(--font-head); font-size: 18px; font-weight: 700; color: var(--text-primary); }
 .gh-url { font-size: 13px; color: var(--text-muted); }
 .gh-btn { margin-left: auto; }
+.gh-btn .translation-note,
+.hero-actions .translation-note {
+  width: 100%;
+  margin-top: -2px;
+  color: rgba(10, 10, 20, 0.7);
+}
 .gh-stats-row {
   display: grid; grid-template-columns: repeat(4, 1fr);
   gap: 16px; margin-bottom: 28px;
